@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0b0a10;
+
+    --heading: #ffffff;
+    --sub-heading: #a9acb2;
+    --foreground: #cfd1d4;
+
+    --card: #12101a;
+    --card-foreground: #cfd1d4;
+
+    --popover: #151321;
+    --popover-foreground: #cfd1d4;
+
+    --primary: #3a1c6b;
+    --primary-foreground: #ffffff;
+    --primary-hover: #5b2fb0;
+
+    --secondary: #f3f1fa;
+    --secondary-foreground: #0b0a10;
+    --secondary-hover: #e8e3f6;
+
+    --muted: #181622;
+    --muted-foreground: #8f93a2;
+    --muted-hover: #1f1c2e;
+
+    --accent: #2a2350;
+    --accent-foreground: #ffffff;
+
+    --destructive: #b42318;
+    --destructive-foreground: #ffffff;
+
+    --border: rgba(255, 255, 255, 0.06);
+    --input: #12101a;
+    --ring: #3a1c6b;
+
+    --radius: 0.65rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-poppins), sans-serif;
+  color: var(--heading);
+}

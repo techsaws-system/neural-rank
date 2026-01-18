@@ -1,0 +1,115 @@
+{
+  "name": "Neural Rank – AI-Powered SEO Platform",
+  "short_name": "Neural Rank",
+  "description": "Neural Rank is an AI-powered SEO platform helping businesses rank higher, optimize content, and grow organic traffic with intelligent, data-driven search strategies across Google and AI-driven search engines.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "portrait-primary",
+  "background_color": "#0b0a10",
+  "theme_color": "#3a1c6b",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": [
+    "business",
+    "marketing",
+    "productivity",
+    "analytics",
+    "technology",
+    "ai"
+  ],
+  "icons": [
+    {
+      "src": "/favicons/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicons/logo-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicons/logo-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicons/logo-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicons/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicons/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Keyword Intelligence",
+      "short_name": "Keywords",
+      "description": "AI-powered keyword research and search intent analysis",
+      "url": "/tools/keyword-intelligence",
+      "icons": [
+        {
+          "src": "/favicons/logo-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Content Optimization",
+      "short_name": "Content",
+      "description": "Optimize content for rankings and AI search visibility",
+      "url": "/tools/content-optimization",
+      "icons": [
+        {
+          "src": "/favicons/logo-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "SEO Analytics",
+      "short_name": "Analytics",
+      "description": "Track performance, rankings, and organic growth",
+      "url": "/analytics",
+      "icons": [
+        {
+          "src": "/favicons/logo-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/home-desktop.png",
+      "sizes": "1440x900",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshots/home-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
