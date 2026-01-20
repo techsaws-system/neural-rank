@@ -79,7 +79,7 @@ function Header() {
   }, [pathname]);
 
   return (
-    <header className="w-full fixed top-4 left-0 right-0 z-[9999]">
+    <header className="w-full fixed top-4 left-0 right-0 z-[9998]">
       <div ref={menuWrapperRef} className="relative">
         <div className="flex h-[60px] justify-between items-center border border-border px-4 md:px-8 rounded-full md:w-[700px] mx-auto max-md:layout-standard backdrop-blur bg-background/60">
           <Link href="/">

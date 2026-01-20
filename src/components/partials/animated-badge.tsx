@@ -13,7 +13,7 @@ export function AnimatedBadge({ heading, className }: AnimatedBadgeProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={cn(
-        "relative inline-flex items-center justify-center overflow-hidden",
+        "relative inline-flex items-center justify-center overflow-hidden w-fit",
         "md:text-sm text-xs capitalize tracking-widest font-heading font-light",
         "text-heading backdrop-blur-2xl bg-background/60",
         "rounded-full border-2 border-border px-4 h-[30px]",

@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface AnimatedBadgeProps {
     heading: string;
     className?: string;
@@ -9,4 +11,10 @@ export interface WordFlipProps {
     className?: string;
     textClassName?: string;
     animationDuration?: number;
+}
+
+export interface VideoCarouselProps {
+    id: string;
+    thumbnail: string | StaticImageData;
+    videoUrl: string;
 }
