@@ -8,6 +8,7 @@ import AppSection from "@/components/sections/home/app-section";
 import ClientsSection from "@/components/sections/home/clients-section";
 import DashboardCTASection from "@/components/sections/home/dashboard-cta-section";
 import DashboardPreviewSection from "@/components/sections/home/dashboard-preview-section";
+import FaqSection from "@/components/sections/home/faq-section";
 import HomeHeroSection from "@/components/sections/home/home-hero-section";
 import ProcessSection from "@/components/sections/home/process-section";
 import TestimonialSection from "@/components/sections/home/testimonial-section";
@@ -26,6 +27,7 @@ function HomePage() {
       <DashboardPreviewSection />
       <AppSection />
       <TestimonialSection />
+      <FaqSection />
     </main>
   );
 }
