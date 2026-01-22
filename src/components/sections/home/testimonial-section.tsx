@@ -37,7 +37,7 @@ function TestimonialSection() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-120px" }}
-      className="layout-standard section-margin-standard flex flex-col gap-8"
+      className="layout-standard section-margin-standard flex flex-col gap-4"
     >
       <motion.div
         variants={container}
@@ -68,8 +68,6 @@ function TestimonialSection() {
       <motion.div variants={container} className="w-full">
         <VideoCarousel />
       </motion.div>
-      
-      
     </motion.section>
   );
 }

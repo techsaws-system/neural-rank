@@ -14,7 +14,6 @@ import {
 import { DashboardPreviewSectionContent } from "@/contents/home-page-content";
 
 import { AnimatedBadge } from "@/components/partials/animated-badge";
-import { Button } from "@/components/ui/button";
 
 import DashboardImage from "../../../../public/images/dashboard-img.png";
 import { Check } from "lucide-react";
@@ -285,10 +284,6 @@ function DashboardPreviewSection() {
                 from patterns to predict next
               </p>
             </motion.div>
-
-            <Button className="px-8 mt-8 lg:w-fit max-md:w-full py-5 rounded-full text-sm md:text-base font-medium border-border text-secondary-foreground hover:bg-secondary-hover bg-secondary">
-              Read More About This
-            </Button>
           </motion.div>
 
           <motion.div
