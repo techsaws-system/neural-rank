@@ -8,7 +8,7 @@ import { siteConfig } from "@/configurations/site";
 import { metadata } from "@/configurations/metadata";
 import { viewport } from "@/configurations/viewport";
 
-export { metadata }; 
+export { metadata };
 export { viewport };
 
 export default function RootLayout({

@@ -17,7 +17,7 @@ import StarsAnimation from "../../public/animations/stars.json"
 
 import { ScanSearch, SlidersHorizontal, TrendingUp } from "lucide-react";
 
-export const AchievementSectionContent01 = [
+export const ClientsSectionContent = [
     acmeLogo,
     pulseLogo,
     echoLogo,
@@ -26,7 +26,7 @@ export const AchievementSectionContent01 = [
     quantumLogo,
 ];
 
-export const AchievementSectionContent02 = [
+export const AchievementSectionContent = [
     {
         value: "70%",
         label: "Drop in Manual Work",

@@ -57,7 +57,7 @@ function TestimonialSection() {
 
         <motion.p
           variants={fadeUp}
-          className="font-medium font-foreground text-sub-heading lg:text-xl md:text-lg text-base"
+          className="font-medium font-foreground text-sub-heading lg:max-w-[900px] lg:text-xl md:text-lg text-base"
         >
           Watch how business owners grow with Neural Rank. Real clients, real
           numbers, and real-time transformations powered by automation and smart

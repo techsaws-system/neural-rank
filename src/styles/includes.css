@@ -1,0 +1,39 @@
+/* HOME PAGE CSS */
+.dashboard-cta-button {
+  position: relative;
+  background: #ffffff;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.dashboard-cta-button::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    #7c3aed 90deg,
+    #3b82f6 180deg,
+    #22d3ee 270deg,
+    transparent 360deg
+  );
+  animation: spin 3s linear infinite;
+  z-index: -1;
+}
+
+.dashboard-cta-button::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  background: white;
+  z-index: -1;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

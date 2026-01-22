@@ -268,34 +268,22 @@ function DashboardPreviewSection() {
               variants={container}
               className="flex flex-col gap-4 mt-8"
             >
-              <motion.p
-                variants={floatIn}
-                className="flex items-center gap-2 md:text-base text-sm text-foreground"
-              >
+              <p className="flex items-center gap-2 md:text-base text-sm text-foreground">
                 <Check className="text-primary-hover flex-shrink-0" /> Spots
                 weak pages before rankings drop
-              </motion.p>
-              <motion.p
-                variants={floatIn}
-                className="flex items-center gap-2 md:text-base text-sm text-foreground"
-              >
+              </p>
+              <p className="flex items-center gap-2 md:text-base text-sm text-foreground">
                 <Check className="text-primary-hover flex-shrink-0" /> Suggests
                 high-converting content
-              </motion.p>
-              <motion.p
-                variants={floatIn}
-                className="flex items-center gap-2 md:text-base text-sm text-foreground"
-              >
+              </p>
+              <p className="flex items-center gap-2 md:text-base text-sm text-foreground">
                 <Check className="text-primary-hover flex-shrink-0" /> Flags
                 underperforming ads early on
-              </motion.p>
-              <motion.p
-                variants={floatIn}
-                className="flex items-center gap-2 md:text-base text-sm text-foreground"
-              >
+              </p>
+              <p className="flex items-center gap-2 md:text-base text-sm text-foreground">
                 <Check className="text-primary-hover flex-shrink-0" /> Learns
                 from patterns to predict next
-              </motion.p>
+              </p>
             </motion.div>
 
             <Button className="px-8 mt-8 lg:w-fit max-md:w-full py-5 rounded-full text-sm md:text-base font-medium border-border text-secondary-foreground hover:bg-secondary-hover bg-secondary">
