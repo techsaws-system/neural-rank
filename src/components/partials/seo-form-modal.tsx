@@ -24,6 +24,7 @@ export function SeoFormModal() {
     console.log({
       name: formData.get("name"),
       email: formData.get("email"),
+      number: formData.get("number"),
       website: formData.get("website"),
     });
   };
@@ -76,10 +77,27 @@ export function SeoFormModal() {
 
           <div className="grid gap-2">
             <Label
+              htmlFor="number"
+              className="text-heading font-heading font-light"
+            >
+              Phone Number
+            </Label>
+            <Input
+              id="number"
+              name="number"
+              type="number"
+              placeholder="(xxx) xxx-xxx"
+              required
+              className="h-[45px] bg-input border-border"
+            />
+          </div>
+
+          <div className="grid gap-2">
+            <Label
               htmlFor="website"
               className="text-heading font-heading font-light"
             >
-              Website
+              Website (optional)
             </Label>
             <Input
               id="website"
@@ -90,7 +108,12 @@ export function SeoFormModal() {
           </div>
 
           <DialogFooter className="md:mt-4">
-            <Button type="submit" className="text-heading font-light md:py-4 py-5 px-8 rounded-sm hover:bg-primary-hover ">Submit</Button>
+            <Button
+              type="submit"
+              className="text-heading font-light md:py-4 py-5 px-8 rounded-sm hover:bg-primary-hover "
+            >
+              Submit
+            </Button>
           </DialogFooter>
         </form>
       </DialogContent>

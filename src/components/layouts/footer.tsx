@@ -135,8 +135,9 @@ function Footer() {
               <ul className="flex flex-col md:gap-3 gap-2">
                 <li>
                   <Link
-                    href={"/"}
+                    href="https://www.google.com/maps?q=Downtown+Business+Center,+1550+West+5th+Avenue,+Cleveland,+Ohio+44113"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:text-white transition-colors md:text-sm text-xs font-medium flex items-start gap-2"
                   >
                     <MapPin size={16} className="mt-0.5 flex-shrink-0" />
@@ -148,23 +149,21 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    href={"/"}
-                    target="_blank"
+                    href="tel:+12162478881"
                     className="hover:text-white transition-colors md:text-sm text-xs font-medium flex items-center gap-2"
                   >
                     <Phone size={16} className="mt-0.5 flex-shrink-0" />
-                    <span>(+1) xxx-xxx-xxx</span>
+                    <span>(216) 247 8881</span>
                   </Link>
                 </li>
 
                 <li>
                   <Link
-                    href={"mailto:ask@neuralrank.com"}
-                    target="_blank"
+                    href={"mailto:info@neuralrank.com"}
                     className="hover:text-white transition-colors md:text-sm text-xs font-medium flex items-center gap-2"
                   >
                     <Mail size={16} className="mt-0.5 flex-shrink-0" />
-                    <span>ask@neuralrank.com</span>
+                    <span>info@neuralrank.com</span>
                   </Link>
                 </li>
               </ul>

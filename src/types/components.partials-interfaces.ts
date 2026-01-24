@@ -18,3 +18,11 @@ export interface VideoCarouselProps {
     thumbnail: string | StaticImageData;
     videoUrl: string;
 }
+
+export type BackgroundGridProps = {
+    children: React.ReactNode;
+    className?: string;
+    gridSize?: number;
+    lineWidth?: number;
+    opacity?: number;
+};
