@@ -5,6 +5,8 @@ import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import Link from "next/link";
 
+import { useSeoForm } from "@/contexts/seo-form-context";
+
 import { AnimatedBadge } from "@/components/partials/animated-badge";
 
 import { ArrowRightIcon, InspectIcon, Rocket } from "lucide-react";
@@ -38,6 +40,8 @@ const fadeUp: Variants = {
 function DashboardCTASection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
+
+  const { openForm } = useSeoForm();
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -100,11 +104,14 @@ function DashboardCTASection() {
           variants={fadeUp}
           className="flex items-center gap-4 justify-center mt-6"
         >
-          <Link href="/" className="relative inline-block">
+          <div
+            onClick={openForm}
+            className="relative inline-block cursor-pointer"
+          >
             <h1 className="dashboard-cta-button rounded-full px-6 py-3 text-background md:text-base font-medium text-sm">
               Get Started
             </h1>
-          </Link>
+          </div>
 
           <Link
             href={"/"}

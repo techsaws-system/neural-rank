@@ -12,6 +12,8 @@ import {
   easeOut,
 } from "framer-motion";
 
+import { useSeoForm } from "@/contexts/seo-form-context";
+
 import { AnimatedHamburgerIcon } from "../partials/animated-hamburger-icon";
 import { Button } from "../ui/button";
 
@@ -50,7 +52,7 @@ const mobileMenuVariants: Variants = {
 
 function useClickOutside<T extends HTMLElement>(
   ref: RefObject<T | null>,
-  handler: () => void
+  handler: () => void,
 ) {
   useEffect(() => {
     const listener = (event: MouseEvent) => {
@@ -69,6 +71,8 @@ function Header() {
 
   const pathname = usePathname();
   const menuWrapperRef = useRef<HTMLDivElement>(null);
+
+  const { openForm } = useSeoForm();
 
   const closeMenu = useCallback(() => setMenuOpen(false), []);
   useClickOutside(menuWrapperRef, closeMenu);
@@ -104,7 +108,7 @@ function Header() {
                   pathname === item.href
                     ? "text-heading"
                     : "text-sub-heading hover:text-heading",
-                  "transition uppercase font-heading"
+                  "transition uppercase font-heading",
                 )}
               >
                 {item.label}
@@ -113,7 +117,10 @@ function Header() {
           </nav>
 
           <div className="flex gap-4 items-center">
-            <Button className="py-2 px-3 rounded-lg font-normal text-sm bg-gradient-to-b from-[#190d2e] to-[#4a208a] shadow-[0px_0px_12px_#8c45ff] relative">
+            <Button
+              onClick={openForm}
+              className="py-2 px-3 rounded-lg font-normal text-sm bg-gradient-to-b from-[#190d2e] to-[#4a208a] shadow-[0px_0px_12px_#8c45ff] relative"
+            >
               <span className="relative z-10">Get Started</span>
             </Button>
 
@@ -150,7 +157,7 @@ function Header() {
                       pathname === item.href
                         ? "text-heading"
                         : "text-sub-heading hover:text-heading",
-                      "uppercase font-heading text-sm font-medium transition"
+                      "uppercase font-heading text-sm font-medium transition",
                     )}
                   >
                     {item.label}

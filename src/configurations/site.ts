@@ -52,6 +52,9 @@ export const siteConfig = {
         solutions: "/solutions",
         about: "/about",
         pricings: "/pricings",
+        privacy: "/privacy-policy",
+        terms: "/terms-conditions",
+        data: "/data-security",
     },
 
     features: [

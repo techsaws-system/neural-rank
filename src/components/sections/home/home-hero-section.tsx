@@ -3,12 +3,19 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import StarsBg from "../../../../public/backgrounds/stars-bg.png";
+import { useSeoForm } from "@/contexts/seo-form-context";
+import { useNavigation } from "@/hooks/use-navigation";
+
 import { Button } from "@/components/ui/button";
 import { AnimatedBadge } from "@/components/partials/animated-badge";
 
+import StarsBg from "../../../../public/backgrounds/stars-bg.png";
+
 function HomeHeroSection() {
   const sectionRef = useRef(null);
+
+  const { navigateTo } = useNavigation();
+  const { openForm } = useSeoForm();
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -18,7 +25,7 @@ function HomeHeroSection() {
   const backgroundPositionY = useTransform(
     scrollYProgress,
     [0, 1],
-    [-300, 300]
+    [-300, 300],
   );
 
   return (
@@ -89,14 +96,20 @@ function HomeHeroSection() {
         </p>
 
         <div className="flex-center md:flex-row flex-col max-md:w-full gap-4 mt-6">
-          <Button className="relative max-md:w-full px-8 py-5 rounded-full text-sm md:text-base font-medium bg-gradient-to-b from-[#2b135f] to-[#4a208a] shadow-[0_0_24px_rgba(140,69,255,0.6)]">
+          <Button
+            onClick={openForm}
+            className="relative max-md:w-full px-8 py-5 rounded-full text-sm md:text-base font-medium bg-gradient-to-b from-[#2b135f] to-[#4a208a] shadow-[0_0_24px_rgba(140,69,255,0.6)]"
+          >
             <span className="relative z-10">Start Optimizing with AI</span>
 
             <span className="absolute inset-0 rounded-full border border-white/20" />
             <span className="absolute inset-0 rounded-full shadow-[0_0_14px_rgba(140,69,255,0.7)_inset]" />
           </Button>
 
-          <Button className="px-8 max-md:w-full py-5 rounded-full text-sm md:text-base font-medium border-border text-secondary-foreground hover:bg-secondary-hover bg-secondary">
+          <Button
+            onClick={() => navigateTo("/about")}
+            className="px-8 max-md:w-full py-5 rounded-full text-sm md:text-base font-medium border-border text-secondary-foreground hover:bg-secondary-hover bg-secondary"
+          >
             See How It Works
           </Button>
         </div>

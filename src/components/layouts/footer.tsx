@@ -62,6 +62,14 @@ function Footer() {
               <ul className="flex flex-col md:gap-3 gap-2">
                 <li>
                   <Link
+                    href={"/"}
+                    className="hover:text-white transition-colors md:text-sm text-xs font-medium"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href={"/about"}
                     className="hover:text-white transition-colors md:text-sm text-xs font-medium"
                   >
@@ -82,14 +90,6 @@ function Footer() {
                     className="hover:text-white transition-colors md:text-sm text-xs font-medium"
                   >
                     Pricings
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href={"/contact Us"}
-                    className="hover:text-white transition-colors md:text-sm text-xs font-medium"
-                  >
-                    Contact Us
                   </Link>
                 </li>
               </ul>

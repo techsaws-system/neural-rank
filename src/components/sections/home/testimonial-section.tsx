@@ -37,7 +37,7 @@ function TestimonialSection() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-120px" }}
-      className="layout-standard section-margin-standard flex flex-col "
+      className="layout-standard section-margin-standard flex flex-col"
     >
       <motion.div
         variants={container}
