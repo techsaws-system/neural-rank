@@ -96,9 +96,14 @@ function DashboardCTASection() {
           working—anytime, without juggling multiple tools.
         </motion.p>
 
-        <motion.div variants={fadeUp} className="flex items-center gap-4 justify-center mt-6">
+        <motion.div
+          variants={fadeUp}
+          className="flex items-center gap-4 justify-center mt-6"
+        >
           <Link href="/" className="relative inline-block">
-            <h1 className="dashboard-cta-button rounded-full px-6 py-3 text-background md:text-base font-medium text-sm">Get Started</h1>
+            <h1 className="dashboard-cta-button rounded-full px-6 py-3 text-background md:text-base font-medium text-sm">
+              Get Started
+            </h1>
           </Link>
 
           <Link
@@ -138,9 +143,12 @@ function DashboardCTASection() {
 
           <motion.div>
             <div className="relative bg-white/5 backdrop-blur-xl border border-border rounded-3xl w-full flex flex-col md:gap-4 gap-2 px-4 md:py-8 py-12 max-md:text-center items-center text-heading">
-              <Rocket size={40} className="max-md:h-[35px] max-md:w-[35px]" />
+              <InspectIcon
+                size={40}
+                className="max-md:h-[35px] max-md:w-[35px]"
+              />
               <p className="md:text-xl text-lg font-medium font-heading">
-                4x Increase in Lead Conversions
+                98% Accurate Predictive Insights
               </p>
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_60%_at_30%_20%,rgba(91,47,176,0.15),transparent)]" />
             </div>
