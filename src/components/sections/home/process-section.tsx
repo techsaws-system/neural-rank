@@ -43,8 +43,11 @@ function ProcessSection() {
         <AnimatedBadge heading="Process That Works" />
 
         <h3 className="lg:text-6xl md:text-5xl text-3xl lg:max-w-4xl !leading-[1.2] font-medium tracking-tight text-heading font-heading uppercase">
-          Our <span className="text-primary-hover font-bold">3</span> Step
-          Process
+          Our{" "}
+          <span className="font-bold bg-gradient-to-r from-primary-hover via-secondary to-primary bg-clip-text text-transparent">
+            3
+          </span>{" "}
+          Step Process
         </h3>
       </div>
 
@@ -67,7 +70,7 @@ function ProcessSection() {
                 "relative p-8 flex flex-col gap-6",
                 "bg-white/5 backdrop-blur-xl",
                 "transition-shadow hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)] relative group",
-                item.class
+                item.class,
               )}
             >
               <Plus className="absolute top-0 left-0 -translate-x-[12px] -translate-y-[12px] transform transition-transform duration-300 ease-out group-hover:rotate-180" />

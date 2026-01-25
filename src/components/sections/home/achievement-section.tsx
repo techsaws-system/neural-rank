@@ -16,7 +16,10 @@ const AchievementSection = () => {
             />
 
             <h3 className="lg:text-3xl md:text-2xl text-xl font-medium tracking-tight text-heading font-heading">
-              Over <span className="text-primary-hover font-bold">2500+</span>{" "}
+              Over{" "}
+              <span className="font-bold bg-gradient-to-r from-primary-hover via-secondary to-primary bg-clip-text text-transparent">
+                2500+
+              </span>{" "}
               Businesses Trust Neural Rank
             </h3>
 

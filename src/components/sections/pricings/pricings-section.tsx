@@ -16,6 +16,7 @@ import { PricingSectionContent } from "@/contents/pricings-page-content";
 
 import { MdEditDocument } from "react-icons/md";
 import { Check } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 function PricingsSection() {
   const { openForm } = useSeoForm();
@@ -67,7 +68,7 @@ function PricingsSection() {
                 >
                   <Check
                     size={16}
-                    className="flex-shrink-0 mt-1 text-primary-hover"
+                    className="flex-shrink-0 mt-1 text-green-500"
                   />
                   <p className="text-base">{data}</p>
                 </div>
@@ -78,7 +79,12 @@ function PricingsSection() {
           <CardFooter className="md:pt-12 py-8">
             <Button
               onClick={openForm}
-              className="bg-primary rounded-none border-2 border-border text-heading font-heading font-medium text-base hover:bg-primary-hover w-full h-[50px]"
+              className={cn(
+                "rounded-none border-2 border-border font-heading font-medium text-base w-full h-[50px]",
+                data.id === 1 || data.id === 2
+                  ? "bg-white hover:bg-white/80 text-background"
+                  : "bg-primary-hover hover:bg-primary text-primary-foreground",
+              )}
             >
               {data.id === 1 || data.id === 2
                 ? "Get Started"

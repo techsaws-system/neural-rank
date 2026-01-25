@@ -10,7 +10,7 @@ import { useSeoForm } from "@/contexts/seo-form-context";
 import { AnimatedBadge } from "@/components/partials/animated-badge";
 
 import { ArrowRightIcon, InspectIcon, Rocket } from "lucide-react";
-import AppImg01 from "../../../../public/images/app-img-01.png";
+import DashboardPreviewImg01 from "../../../../public/images/dashboard-preview-img-01.png";
 
 const container: Variants = {
   hidden: {},
@@ -86,7 +86,7 @@ function DashboardCTASection() {
 
         <motion.h1
           variants={fadeUp}
-          className="lg:text-6xl md:text-5xl text-3xl lg:max-w-4xl !leading-[1.2] font-medium tracking-tight text-heading font-heading uppercase mt-2 text-center"
+          className="lg:text-6xl md:text-5xl text-3xl lg:max-w-4xl !leading-[1.2] font-medium tracking-tight font-heading uppercase mt-2 text-center bg-gradient-to-r from-primary-hover via-secondary to-primary bg-clip-text text-transparent"
         >
           Run Your Business Smarter
         </motion.h1>
@@ -173,8 +173,8 @@ function DashboardCTASection() {
           <div className="pointer-events-none absolute inset-0 -z-10 rounded-[32px] blur-2xl bg-black/40" />
 
           <Image
-            src={AppImg01}
-            alt="Neural Rank Dashboard App"
+            src={DashboardPreviewImg01}
+            alt="Neural Rank Dashboard"
             priority
             className="w-[500px] h-auto flex-shrink-0 rounded-[28px] drop-shadow-[0_40px_90px_rgba(0,0,0,0.65)]"
           />

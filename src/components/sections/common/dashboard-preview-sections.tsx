@@ -10,12 +10,14 @@ import {
   ValueAnimationTransition,
   Variants,
 } from "framer-motion";
+import Image from "next/image";
 
-import { DashboardPreviewSectionContent } from "@/contents/home-page-content";
+import { DashboardPreviewSection01Content } from "@/contents/common-sections-content";
 
 import { AnimatedBadge } from "@/components/partials/animated-badge";
 
-import DashboardImage from "../../../../public/images/dashboard-img.png";
+import DashboardPreviewImg01 from "../../../../public/images/dashboard-preview-img-03.png";
+import DashboardPreviewImg02 from "../../../../public/images/dashboard-preview-img-02.png";
 import { Check } from "lucide-react";
 
 const container: Variants = {
@@ -60,8 +62,8 @@ const floatIn: Variants = {
   },
 };
 
-const DashboardPreviewSectionTab = (
-  props: (typeof DashboardPreviewSectionContent)[number] &
+const DashboardPreviewSection01Tab = (
+  props: (typeof DashboardPreviewSection01Content)[number] &
     ComponentPropsWithoutRef<"div"> & { selected: boolean },
 ) => {
   const tabRef = useRef<HTMLDivElement>(null);
@@ -145,17 +147,17 @@ const DashboardPreviewSectionTab = (
   );
 };
 
-function DashboardPreviewSection() {
+export function DashboardPreviewSection01() {
   const [selectedTab, setSelectedTab] = useState(0);
 
   const backgroundPositionX = useMotionValue(
-    DashboardPreviewSectionContent[0].backgroundPositionX,
+    DashboardPreviewSection01Content[0].backgroundPositionX,
   );
   const backgroundPositionY = useMotionValue(
-    DashboardPreviewSectionContent[0].backgroundPositionY,
+    DashboardPreviewSection01Content[0].backgroundPositionY,
   );
   const backgroundSizeX = useMotionValue(
-    DashboardPreviewSectionContent[0].backgroundSizeX,
+    DashboardPreviewSection01Content[0].backgroundSizeX,
   );
 
   const backgroundPosition = useMotionTemplate`${backgroundPositionX}% ${backgroundPositionY}%`;
@@ -174,7 +176,7 @@ function DashboardPreviewSection() {
       [
         backgroundSizeX.get(),
         100,
-        DashboardPreviewSectionContent[index].backgroundSizeX,
+        DashboardPreviewSection01Content[index].backgroundSizeX,
       ],
       animateOptions,
     );
@@ -183,7 +185,7 @@ function DashboardPreviewSection() {
       backgroundPositionX,
       [
         backgroundPositionX.get(),
-        DashboardPreviewSectionContent[index].backgroundPositionX,
+        DashboardPreviewSection01Content[index].backgroundPositionX,
       ],
       animateOptions,
     );
@@ -192,7 +194,7 @@ function DashboardPreviewSection() {
       backgroundPositionY,
       [
         backgroundPositionY.get(),
-        DashboardPreviewSectionContent[index].backgroundPositionY,
+        DashboardPreviewSection01Content[index].backgroundPositionY,
       ],
       animateOptions,
     );
@@ -219,7 +221,9 @@ function DashboardPreviewSection() {
           className="lg:text-6xl md:text-5xl text-3xl lg:max-w-5xl !leading-[1.2] font-medium tracking-tight text-heading font-heading uppercase mt-2"
         >
           What You Get with{" "}
-          <span className="text-primary-hover font-bold">Neural Rank</span>
+          <span className="font-bold bg-gradient-to-r from-primary-hover via-secondary to-primary bg-clip-text text-transparent">
+            Neural Rank
+          </span>
         </motion.h1>
 
         <motion.p
@@ -232,8 +236,8 @@ function DashboardPreviewSection() {
 
       <motion.div variants={container} className="flex flex-col gap-4 w-full">
         <motion.div className="lg:flex lg:justify-center lg:items-center gap-4 grid md:grid-cols-2 grid-cols-1">
-          {DashboardPreviewSectionContent.map((tab, tabIndex) => (
-            <DashboardPreviewSectionTab
+          {DashboardPreviewSection01Content.map((tab, tabIndex) => (
+            <DashboardPreviewSection01Tab
               {...tab}
               selected={selectedTab === tabIndex}
               onClick={() => handleSelectTab(tabIndex)}
@@ -295,7 +299,7 @@ function DashboardPreviewSection() {
               style={{
                 backgroundPosition,
                 backgroundSize,
-                backgroundImage: `url(${DashboardImage.src})`,
+                backgroundImage: `url(${DashboardPreviewImg01.src})`,
               }}
             />
           </motion.div>
@@ -305,4 +309,78 @@ function DashboardPreviewSection() {
   );
 }
 
-export default DashboardPreviewSection;
+export function DashboardPreviewSection02() {
+  return (
+    <motion.section
+      className="layout-standard lg:py-4 max-lg:mb-12"
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-120px" }}
+    >
+      <div className="grid lg:grid-cols-3 grid-cols-1 md:gap-16 gap-8 overflow-hidden items-center">
+        <motion.div
+          className="col-span-1 relative overflow-hidden max-lg:flex max-lg:justify-center"
+          variants={floatIn}
+        >
+          <Image
+            src={DashboardPreviewImg02}
+            alt="Nerual Rank Dashboard"
+            className="object-cover h-auto lg:w-[500px] md:w-[400px] w-[300px]"
+          />
+          <div
+            className="pointer-events-none absolute bottom-0 left-0 z-50 h-[30%] w-full"
+            style={{
+              background:
+                "linear-gradient(to top, #0b0a10 0%, rgba(11,10,16,0.7) 40%, transparent 100%)",
+            }}
+          />
+        </motion.div>
+
+        <motion.div
+          className="lg:col-span-2 col-span-1 flex flex-col lg:gap-8 gap-4"
+          variants={container}
+        >
+          <motion.div variants={container} className="flex flex-col gap-4">
+            <motion.div variants={fadeUp}>
+              <AnimatedBadge heading="Modern Search & AI Discovery" />
+            </motion.div>
+
+            <motion.h1
+              variants={fadeUp}
+              className="lg:text-6xl md:text-5xl text-3xl !leading-[1.2] font-medium tracking-tight text-heading font-heading"
+            >
+              <span className="font-bold bg-gradient-to-r from-primary-hover via-secondary to-primary bg-clip-text text-transparent">
+                {" "}
+                SEO
+              </span>{" "}
+              your Real Rankings.
+            </motion.h1>
+          </motion.div>
+
+          <motion.div variants={container} className="flex flex-col gap-4">
+            <motion.p
+              variants={fadeUp}
+              className="leading-relaxed lg:text-xl md:text-lg text-base font-medium"
+            >
+              Neural Rank is an AI-powered SEO platform designed to help brands
+              understand search intent, optimize content intelligently, and
+              compete in an evolving search landscape shaped by both Google and
+              AI-driven discovery engines.
+            </motion.p>
+
+            <motion.p
+              variants={fadeUp}
+              className="leading-relaxed lg:text-xl md:text-lg text-base font-medium"
+            >
+              Instead of guesswork and outdated tactics, Neural Rank uses
+              data-driven insights and machine intelligence to guide smarter SEO
+              decisions—so teams can focus on sustainable growth, not short-term
+              tricks.
+            </motion.p>
+          </motion.div>
+        </motion.div>
+      </div>
+    </motion.section>
+  );
+}

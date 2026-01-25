@@ -8,7 +8,7 @@ import { AnimatedBadge } from "@/components/partials/animated-badge";
 import GlassShapeImg01 from "../../../../public/images/glass-shape-img-01.png";
 import GlassShapeImg02 from "../../../../public/images/glass-shape-img-02.png";
 import GlassShapeImg03 from "../../../../public/images/glass-shape-img-03.png";
-import DashboardImg from "../../../../public/images/dashboard-img.png";
+import DashboardImg from "../../../../public/images/dashboard-preview-img-03.png";
 
 const container: Variants = {
   hidden: {},
@@ -142,8 +142,11 @@ export function AboutSection01() {
             variants={fadeUp}
             className="lg:text-6xl md:text-5xl text-3xl !leading-[1.2] font-medium tracking-tight text-heading font-heading"
           >
-            <span className="text-primary-hover font-semibold"> SEO</span> your
-            Real Rankings.
+            <span className="font-bold bg-gradient-to-r from-primary-hover via-secondary to-primary bg-clip-text text-transparent">
+              {" "}
+              SEO
+            </span>{" "}
+            your Real Rankings.
           </motion.h1>
         </motion.div>
 
@@ -195,8 +198,11 @@ export function AboutSection02() {
             variants={fadeUp}
             className="lg:text-6xl md:text-5xl text-3xl !leading-[1.2] font-medium tracking-tight text-heading font-heading"
           >
-            <span className="text-primary-hover font-semibold"> SEO</span> your
-            Real Rankings.
+            <span className="font-bold bg-gradient-to-r from-primary-hover via-secondary to-primary bg-clip-text text-transparent">
+              {" "}
+              SEO
+            </span>{" "}
+            your Real Rankings.
           </motion.h1>
         </motion.div>
 

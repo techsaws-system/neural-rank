@@ -1,8 +1,10 @@
 import BackgroundGrid from "@/components/partials/background-grid";
-import AppSection from "@/components/sections/home/app-section";
-import DashboardCTASection from "@/components/sections/home/dashboard-cta-section";
+
 import PricingsHeroSection from "@/components/sections/pricings/pricings-hero-section";
 import PricingsSection from "@/components/sections/pricings/pricings-section";
+
+import {DashboardPreviewSection02 } from "@/components/sections/common/dashboard-preview-sections";
+import DashboardCTASection from "@/components/sections/common/dashboard-cta-section";
 
 function PricingsPage() {
   return (
@@ -10,7 +12,7 @@ function PricingsPage() {
       <PricingsHeroSection />
       <PricingsSection />
       <DashboardCTASection />
-      <AppSection />
+      <DashboardPreviewSection02 />
     </BackgroundGrid>
   );
 }
