@@ -23,8 +23,8 @@ import Logo from "../../../public/favicons/logo-transparent.png";
 import { ChevronDown } from "lucide-react";
 
 const solutions = [
-  { label: "AI SEO", href: "/solution/ai-seo" },
-  { label: "AI GEO", href: "/solution/ai-geo" },
+  { label: "AIO Solution", href: "/solutions/aio-solution" },
+  { label: "GEO Solution", href: "/solutions/geo-solution" },
 ];
 
 const mobileMenuVariants: Variants = {

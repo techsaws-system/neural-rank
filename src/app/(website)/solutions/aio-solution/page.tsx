@@ -1,16 +1,16 @@
-import AISeoSolutionPage from "@/containers/solutions/ai-seo-solution-page";
+import AIOSolutionPage from "@/containers/solutions/aio-solution-page";
 
 import { PageMetadata } from "@/utils/page-matadata";
 
 export const metadata = PageMetadata({
-  title: "AI SEO Services for Higher Rankings & Organic Growth",
+  title: "SEO Services for Higher Rankings & Organic Growth | Neural Rank",
   description:
     "Neural Rank delivers AI-powered SEO services including keyword intelligence, content optimization, technical SEO insights, and performance analytics designed to increase rankings and organic traffic.",
-  path: "/solution/ai-seo",
+  path: "/solutions/aio-solution",
 });
 
-function AISeoSolution() {
-  return <AISeoSolutionPage />;
+function AIOSolution() {
+  return <AIOSolutionPage />;
 }
 
-export default AISeoSolution;
+export default AIOSolution;

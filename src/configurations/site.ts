@@ -1,7 +1,7 @@
 export const siteConfig = {
     name: "Neural Rank",
     shortName: "Neural Rank",
-    title: "Neural Rank – AI-Powered SEO Platform for Real Rankings",
+    title: "AI-Powered SEO Platform for Real Rankings | Neural Rank",
     description:
         "Neural Rank is an AI-powered SEO platform helping businesses rank higher, optimize content, and grow organic traffic with intelligent, data-driven search strategies across Google and AI-driven search engines.",
 
@@ -49,13 +49,15 @@ export const siteConfig = {
 
     links: {
         home: "/",
-        seosolution: "/solution/ai-seo",
-        geosolution: "/solution/ai-geo",
+        seosolution: "/solutions/aio-solution",
+        geosolution: "/solutions/geo-solution",
         about: "/about",
         pricings: "/pricings",
         privacy: "/privacy-policy",
         terms: "/terms-conditions",
         data: "/data-security",
+        register: "/register",
+        login: "/login",
     },
 
     features: [

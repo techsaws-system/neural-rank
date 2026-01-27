@@ -1,16 +1,16 @@
-import AIGeoSolutionPage from "@/containers/solutions/ai-geo-solution-page";
+import GEOSolutionPage from "@/containers/solutions/geo-solution-page";
 
 import { PageMetadata } from "@/utils/page-matadata";
 
 export const metadata = PageMetadata({
-  title: "AI GEO Optimization for Answer Engines & AI Search",
+  title: "GEO Optimization for Answer Engines & AI Search | Neural Rank",
   description:
     "Optimize your brand for AI-generated search results with Neural Rank’s AI GEO solution. Get discovered in Google AI Overviews, ChatGPT answers, and next-generation answer engines.",
-  path: "/solution/ai-geo",
+  path: "/solutions/geo-solution",
 });
 
-function AIGeoSolution() {
-  return <AIGeoSolutionPage />;
+function GEOSolution() {
+  return <GEOSolutionPage />;
 }
 
-export default AIGeoSolution;
+export default GEOSolution;
