@@ -81,7 +81,7 @@ function Footer() {
                     href={"/solutions/aio-solution"}
                     className="hover:text-white transition-colors md:text-sm text-xs font-medium"
                   >
-                    AIO Solution
+                    AIO
                   </Link>
                 </li>
                 <li>
@@ -89,7 +89,7 @@ function Footer() {
                     href={"/solutions/geo-solution"}
                     className="hover:text-white transition-colors md:text-sm text-xs font-medium"
                   >
-                    GEO Solution
+                    GEO
                   </Link>
                 </li>
                 <li>
