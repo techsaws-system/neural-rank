@@ -78,10 +78,18 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    href={"/solutions"}
+                    href={"/solution/ai-seo"}
                     className="hover:text-white transition-colors md:text-sm text-xs font-medium"
                   >
-                    Our Solutions
+                    AI SEO Solution
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={"/solution/ai-geo"}
+                    className="hover:text-white transition-colors md:text-sm text-xs font-medium"
+                  >
+                    AI GEO Solution
                   </Link>
                 </li>
                 <li>

@@ -18,3 +18,9 @@ export type BackgroundGridProps = {
     lineWidth?: number;
     opacity?: number;
 };
+
+export type CountUpProps = {
+    value: number;
+    suffix?: string;
+    duration?: number;
+};

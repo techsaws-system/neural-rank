@@ -114,7 +114,7 @@ function DashboardCTASection() {
           </div>
 
           <Link
-            href={"/"}
+            href={"/login"}
             className="flex items-center underline underline-offset-4 cursor-pointer text-heading font-heading md:text-base text-sm gap-2"
           >
             <ArrowRightIcon size={20} />

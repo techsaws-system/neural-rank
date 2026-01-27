@@ -20,6 +20,12 @@ import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 
 import Logo from "../../../public/favicons/logo-transparent.png";
+import { ChevronDown } from "lucide-react";
+
+const solutions = [
+  { label: "AI SEO", href: "/solution/ai-seo" },
+  { label: "AI GEO", href: "/solution/ai-geo" },
+];
 
 const mobileMenuVariants: Variants = {
   hidden: {
@@ -68,6 +74,7 @@ function useClickOutside<T extends HTMLElement>(
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
 
   const pathname = usePathname();
   const menuWrapperRef = useRef<HTMLDivElement>(null);
@@ -95,25 +102,84 @@ function Header() {
           </Link>
 
           <nav className="hidden md:flex gap-6 text-sm font-medium">
-            {[
-              { label: "Home", href: "/" },
-              { label: "Solutions", href: "/solutions" },
-              { label: "About", href: "/about" },
-              { label: "Pricings", href: "/pricings" },
-            ].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
+            <Link
+              href="/"
+              className={cn(
+                pathname === "/"
+                  ? "text-heading"
+                  : "text-sub-heading hover:text-heading",
+                "transition uppercase font-heading",
+              )}
+            >
+              Home
+            </Link>
+
+            <div
+              className="relative"
+              onMouseEnter={() => setSolutionsOpen(true)}
+              onMouseLeave={() => setSolutionsOpen(false)}
+            >
+              <button
                 className={cn(
-                  pathname === item.href
+                  pathname.startsWith("/solution")
                     ? "text-heading"
                     : "text-sub-heading hover:text-heading",
-                  "transition uppercase font-heading",
+                  "uppercase font-heading transition",
                 )}
               >
-                {item.label}
-              </Link>
-            ))}
+                Solutions
+              </button>
+
+              <AnimatePresence>
+                {solutionsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 6, filter: "blur(6px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    exit={{ opacity: 0, y: 6, filter: "blur(6px)" }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full mt-3 -left-[70%] -translate-x-1/2 
+                     w-56 rounded-xl border border-border 
+                     bg-black backdrop-blur shadow-xl p-2 z-50"
+                  >
+                    {solutions.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block px-3 py-2 rounded-lg text-sm 
+                         text-sub-heading hover:text-heading 
+                         hover:bg-muted transition"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <Link
+              href="/about"
+              className={cn(
+                pathname === "/about"
+                  ? "text-heading"
+                  : "text-sub-heading hover:text-heading",
+                "transition uppercase font-heading",
+              )}
+            >
+              About
+            </Link>
+
+            <Link
+              href="/pricings"
+              className={cn(
+                pathname === "/pricings"
+                  ? "text-heading"
+                  : "text-sub-heading hover:text-heading",
+                "transition uppercase font-heading",
+              )}
+            >
+              Pricings
+            </Link>
           </nav>
 
           <div className="flex gap-4 items-center">
@@ -141,28 +207,86 @@ function Header() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="md:hidden overflow-hidden mx-auto mt-3 max-md:layout-standard backdrop-blur bg-background/60"
+              className="md:hidden overflow-hidden mx-auto mt-3 max-md:layout-standard backdrop-blur bg-background/60 rounded-2xl"
             >
               <div className="rounded-2xl border border-border px-6 py-6 flex flex-col gap-4">
-                {[
-                  { label: "Home", href: "/" },
-                  { label: "Solutions", href: "/solutions" },
-                  { label: "About", href: "/about" },
-                  { label: "Pricings", href: "/pricings" },
-                ].map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={cn(
-                      pathname === item.href
-                        ? "text-heading"
-                        : "text-sub-heading hover:text-heading",
-                      "uppercase font-heading text-sm font-medium transition",
-                    )}
+                <Link
+                  href="/"
+                  className={cn(
+                    pathname === "/"
+                      ? "text-heading"
+                      : "text-sub-heading hover:text-heading",
+                    "uppercase font-heading text-sm font-medium transition",
+                  )}
+                >
+                  Home
+                </Link>
+
+                <div className="flex flex-col">
+                  <button
+                    onClick={() => setSolutionsOpen((p) => !p)}
+                    className="flex items-center justify-between uppercase font-heading text-sm font-medium 
+                 text-sub-heading hover:text-heading transition"
                   >
-                    {item.label}
-                  </Link>
-                ))}
+                    Solutions
+                    <span
+                      className={cn(
+                        "transition-transform duration-200",
+                        solutionsOpen && "rotate-180",
+                      )}
+                    >
+                      <ChevronDown size={18} />
+                    </span>
+                  </button>
+
+                  <AnimatePresence>
+                    {solutionsOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25 }}
+                        className="mx-3 mt-2 flex flex-col gap-2 overflow-hidden"
+                      >
+                        {solutions.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            className={cn(
+                              "text-sm text-sub-heading hover:text-heading transition border-b-2 border-border pb-2",
+                            )}
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                <Link
+                  href="/about"
+                  className={cn(
+                    pathname === "/about"
+                      ? "text-heading"
+                      : "text-sub-heading hover:text-heading",
+                    "uppercase font-heading text-sm font-medium transition",
+                  )}
+                >
+                  About
+                </Link>
+
+                <Link
+                  href="/pricings"
+                  className={cn(
+                    pathname === "/pricings"
+                      ? "text-heading"
+                      : "text-sub-heading hover:text-heading",
+                    "uppercase font-heading text-sm font-medium transition",
+                  )}
+                >
+                  Pricings
+                </Link>
               </div>
             </motion.div>
           )}

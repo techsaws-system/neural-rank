@@ -6,6 +6,8 @@ import PricingsSection from "@/components/sections/pricings/pricings-section";
 import {DashboardPreviewSection02 } from "@/components/sections/common/dashboard-preview-sections";
 import DashboardCTASection from "@/components/sections/common/dashboard-cta-section";
 import CtaSection from "@/components/sections/common/cta-section";
+import TestimonialSection from "@/components/sections/common/testimonial-section";
+import FaqSection from "@/components/sections/common/faq-section";
 
 function PricingsPage() {
   return (
@@ -14,6 +16,8 @@ function PricingsPage() {
       <PricingsSection />
       <DashboardCTASection />
       <DashboardPreviewSection02 />
+      <TestimonialSection />
+      <FaqSection />
       <CtaSection />
     </BackgroundGrid>
   );

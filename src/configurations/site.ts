@@ -49,7 +49,8 @@ export const siteConfig = {
 
     links: {
         home: "/",
-        solutions: "/solutions",
+        seosolution: "/solution/ai-seo",
+        geosolution: "/solution/ai-geo",
         about: "/about",
         pricings: "/pricings",
         privacy: "/privacy-policy",
