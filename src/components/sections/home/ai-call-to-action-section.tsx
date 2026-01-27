@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 
 import StarsBg from "../../../../public/backgrounds/stars-bg.png";
 import GridLinesBg from "../../../../public/backgrounds/grid-lines-bg.png";
+import { ArrowRight } from "lucide-react";
 
 const useRelativeMousePosition = <T extends HTMLElement>(
   to: RefObject<T | null>,
@@ -105,7 +106,10 @@ function AICallToActionSection() {
               onClick={openForm}
               className="relative max-md:w-full px-8 py-5 rounded-full text-sm md:text-base font-medium bg-gradient-to-b from-[#2b135f] to-[#4a208a] shadow-[0_0_24px_rgba(140,69,255,0.6)]"
             >
-              <span className="relative z-10">Start Optimizing with AI</span>
+              <span className="relative z-10 flex items-center gap-2">
+                Start Optimizing with AI{" "}
+                <ArrowRight className="w-4 h-4" />
+              </span>
 
               <span className="absolute inset-0 rounded-full border border-white/20" />
               <span className="absolute inset-0 rounded-full shadow-[0_0_14px_rgba(140,69,255,0.7)_inset]" />
