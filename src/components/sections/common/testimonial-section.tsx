@@ -41,7 +41,11 @@ const fadeUp: Variants = {
   },
 };
 
+const TESTIMONIAL_SECTION_ENABLED = false;
+
 function TestimonialSection() {
+  if (!TESTIMONIAL_SECTION_ENABLED) return null;
+
   const items = [...TestimonialSectionContent, ...TestimonialSectionContent];
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
