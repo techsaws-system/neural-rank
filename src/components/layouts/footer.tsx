@@ -143,14 +143,14 @@ function Footer() {
               <ul className="flex flex-col md:gap-3 gap-2">
                 <li>
                   <Link
-                    href="https://www.google.com/maps?q=Downtown+Business+Center,+1550+West+5th+Avenue,+Cleveland,+Ohio+44113"
+                    href="https://www.google.com/maps?q=Downtown+Business+Center,+1550+West+5th+Avenue,+Columbus,+Ohio+44113"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors md:text-sm text-xs font-medium flex items-start gap-2"
                   >
                     <MapPin size={16} className="mt-0.5 flex-shrink-0" />
                     <span>
-                      Downtown Business Center, 1550 West 5th Avenue, Cleveland,
+                      Downtown Business Center, 1550 West 5th Avenue, Columbus,
                       Ohio 44113, United States
                     </span>
                   </Link>
