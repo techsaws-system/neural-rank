@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 type Card = {
@@ -182,13 +182,6 @@ export default function AioAbout() {
             <FeatureCard key={idx} card={card} />
           ))}
         </div>
-      </div>
-
-      {/* Floating CTA */}
-      <div className="hidden md:block fixed bottom-8 left-8 z-20">
-        <Button className="px-6 py-3 rounded-full text-[18px] leading-[18px] font-[700] bg-[#00FFD4] text-[#24262a] hover:opacity-90 transition">
-          Start for Free
-        </Button>
       </div>
 
       {/* LOCAL STYLES (safe + scoped) */}

@@ -20,12 +20,6 @@ import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 
 import Logo from "../../../public/favicons/logo-transparent.png";
-import { ChevronDown } from "lucide-react";
-
-const solutions = [
-  { label: "AIO", href: "/solutions/aio-solution" },
-  { label: "GEO", href: "/solutions/geo-solution" },
-];
 
 const mobileMenuVariants: Variants = {
   hidden: {
@@ -114,48 +108,17 @@ function Header() {
               Home
             </Link>
 
-            <div
-              className="relative"
-              onMouseEnter={() => setSolutionsOpen(true)}
-              onMouseLeave={() => setSolutionsOpen(false)}
+            <Link
+              href="/solutions"
+              className={cn(
+                pathname === "/solutions"
+                  ? "text-heading"
+                  : "text-sub-heading hover:text-heading",
+                "transition uppercase font-heading",
+              )}
             >
-              <button
-                className={cn(
-                  pathname.startsWith("/solution")
-                    ? "text-heading"
-                    : "text-sub-heading hover:text-heading",
-                  "uppercase font-heading transition",
-                )}
-              >
-                Solutions
-              </button>
-
-              <AnimatePresence>
-                {solutionsOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 6, filter: "blur(6px)" }}
-                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                    exit={{ opacity: 0, y: 6, filter: "blur(6px)" }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full mt-3 -left-[70%] -translate-x-1/2 
-                     w-56 rounded-xl border border-border 
-                     bg-black backdrop-blur shadow-xl p-2 z-50"
-                  >
-                    {solutions.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="block px-3 py-2 rounded-lg text-sm 
-                         text-sub-heading hover:text-heading 
-                         hover:bg-muted transition"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+              Solutions
+            </Link>
 
             <Link
               href="/about"
@@ -222,47 +185,17 @@ function Header() {
                   Home
                 </Link>
 
-                <div className="flex flex-col">
-                  <button
-                    onClick={() => setSolutionsOpen((p) => !p)}
-                    className="flex items-center justify-between uppercase font-heading text-sm font-medium 
-                 text-sub-heading hover:text-heading transition"
-                  >
-                    Solutions
-                    <span
-                      className={cn(
-                        "transition-transform duration-200",
-                        solutionsOpen && "rotate-180",
-                      )}
-                    >
-                      <ChevronDown size={18} />
-                    </span>
-                  </button>
-
-                  <AnimatePresence>
-                    {solutionsOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.25 }}
-                        className="mx-3 mt-2 flex flex-col gap-2 overflow-hidden"
-                      >
-                        {solutions.map((item) => (
-                          <Link
-                            key={item.href}
-                            href={item.href}
-                            className={cn(
-                              "text-sm text-sub-heading hover:text-heading transition border-b-2 border-border pb-2",
-                            )}
-                          >
-                            {item.label}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
+                <Link
+                  href="/solutions"
+                  className={cn(
+                    pathname === "/solutions"
+                      ? "text-heading"
+                      : "text-sub-heading hover:text-heading",
+                    "uppercase font-heading text-sm font-medium transition",
+                  )}
+                >
+                  Solutions
+                </Link>
 
                 <Link
                   href="/about"

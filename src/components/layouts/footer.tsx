@@ -6,12 +6,12 @@ import Link from "next/link";
 import {
   Facebook,
   Instagram,
-  Youtube,
   Linkedin,
   MapPin,
   Phone,
   Mail,
 } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 import CertificateBadgeImg01 from "../../../public/images/certificate-badge-img-01.svg";
 import CertificateBadgeImg02 from "../../../public/images/certificate-badge-img-02.svg";
 import CertificateBadgeImg03 from "../../../public/images/certificate-badge-img-03.avif";
@@ -150,8 +150,7 @@ function Footer() {
                   >
                     <MapPin size={16} className="mt-0.5 flex-shrink-0" />
                     <span>
-                      Downtown Business Center, 1550 West 5th Avenue, Columbus,
-                      Ohio 44113, United States
+                      1550 W 5th Avenue Columbus, OH 43212, United States
                     </span>
                   </Link>
                 </li>
@@ -185,28 +184,32 @@ function Footer() {
 
             <div className="flex items-center gap-4">
               <Link
-                href={"/"}
+                href={
+                  "https://www.facebook.com/people/Neural-Rank/61587772491116/?mibextid=wwXIfr&rdid=qI6ljWWaWXUxscwS&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1iY5vYFbHg%2F%3Fmibextid%3DwwXIfr"
+                }
                 target="_blank"
                 className="text-muted-foreground hover:text-heading transition-colors"
               >
                 <Facebook size={20} />
               </Link>
               <Link
-                href={"/"}
+                href={"https://www.instagram.com/neuralrank"}
                 target="_blank"
                 className="text-muted-foreground hover:text-heading transition-colors"
               >
                 <Instagram size={20} />
               </Link>
               <Link
-                href={"/"}
+                href={"https://x.com/neuralrank01"}
                 target="_blank"
                 className="text-muted-foreground hover:text-heading transition-colors"
               >
-                <Youtube size={20} />
+                <FaXTwitter size={20} />
               </Link>
               <Link
-                href={"/"}
+                href={
+                  "https://www.linkedin.com/checkpoint/challengesV2/AQElvXNvGcnWswAAAZy5wTxgS0NJBBspbOop5Yixicy6YUrfvsDV2kzEs_ZSzVo8mzYDVEgawTd7BDmM4TG9Qp8Amjz4BraVrg?ut=39GX5TjUhNPI81"
+                }
                 target="_blank"
                 className="text-muted-foreground hover:text-heading transition-colors"
               >
