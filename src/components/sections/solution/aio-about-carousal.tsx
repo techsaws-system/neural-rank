@@ -116,8 +116,7 @@ export default function AioStages() {
                 <div>
                   <div className="flex items-center gap-6 mb-8">
                     <div
-                      className="h-16 w-16 rounded-full flex items-center justify-center text-black text-2xl font-bold
-                      bg-gradient-to-br from-purple-300 to-purple-500"
+                      className="h-16 w-16 rounded-full flex items-center justify-center text-black text-2xl font-bold bg-gradient-to-br from-purple-300 to-purple-500"
                     >
                       {stage.number}
                     </div>

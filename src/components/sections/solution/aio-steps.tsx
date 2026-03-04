@@ -51,11 +51,7 @@ export default function AioSteps() {
               <div className="absolute -bottom-8 w-40 h-24 bg-purple-600/20 blur-3xl rounded-full pointer-events-none" />
 
               {/* Number Badge */}
-              <div
-                className="mb-6 h-14 w-14 rounded-full flex items-center justify-center
-                text-black text-xl font-bold
-                bg-gradient-to-br from-purple-300 to-purple-500"
-              >
+              <div className="mb-6 h-14 w-14 rounded-full flex items-center justify-center text-black text-xl font-bold bg-gradient-to-br from-purple-300 to-purple-500">
                 {step.number}
               </div>
 
