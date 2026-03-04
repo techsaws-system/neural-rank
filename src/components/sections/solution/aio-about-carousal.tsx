@@ -111,8 +111,7 @@ export default function AioStages() {
             {stages.map((stage, i) => (
               <div
                 key={i}
-                className="snap-start min-w-[720px] max-w-[720px] rounded-3xl p-14 flex flex-col justify-between
-                bg-[rgba(0,0,0,0.65)] backdrop-blur-2xl border border-white/10"
+                className="snap-start min-w-[720px] max-w-[720px] rounded-3xl p-14 flex flex-col justify-between bg-[rgba(0,0,0,0.65)] backdrop-blur-2xl border border-white/10"
               >
                 <div>
                   <div className="flex items-center gap-6 mb-8">
