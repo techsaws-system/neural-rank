@@ -1,8 +1,8 @@
 import AioAbout from "@/components/sections/solution/aio-about";
 import AioSteps from "@/components/sections/solution/aio-steps";
-import AIOSolutionPage from "@/containers/solutions/aio-solution-page";
 import AioAboutCarousal from "@/components/sections/solution/aio-about-carousal";
 import { PageMetadata } from "@/utils/page-matadata";
+import SolutionHeroSection from "@/components/sections/solution/solution-hero-section";
 
 export const metadata = PageMetadata({
   title: "SEO Services for Higher Rankings & Organic Growth | Neural Rank",
@@ -14,7 +14,7 @@ export const metadata = PageMetadata({
 function SolutionPage() {
   return (
     <>
-      <AIOSolutionPage />
+      <SolutionHeroSection />
       <AioAbout />
       <AioAboutCarousal />
       <AioSteps />
