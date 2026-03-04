@@ -25,13 +25,16 @@ function Footer() {
       <div className="bg-black border-y-2 border-border pb-6 section-padding-standard relative overflow-hidden">
         <div className="layout-standard relative z-10">
           <div className="flex md:items-start items-center justify-between mb-12">
-            <div className="bg-gradient-to-r from-muted border-2 border-primary flex-center lg:p-4 p-2 rounded-lg">
+            <Link
+              href={"/"}
+              className="bg-gradient-to-r from-muted border-2 border-primary flex-center lg:p-4 p-2 rounded-lg"
+            >
               <Image
                 src={Logo}
                 alt="Neural Rank – AI-Powered SEO Platform for Real Rankings"
                 className="lg:w-[60px] w-[50px] h-auto"
               />
-            </div>
+            </Link>
 
             <div className="flex flex-col gap-6 items-center">
               <div className="flex items-center gap-4">
@@ -78,18 +81,10 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    href={"/solutions/aio-solution"}
+                    href={"/solutions"}
                     className="hover:text-white transition-colors md:text-sm text-xs font-medium"
                   >
-                    AIO
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href={"/solutions/geo-solution"}
-                    className="hover:text-white transition-colors md:text-sm text-xs font-medium"
-                  >
-                    GEO
+                    Solutions
                   </Link>
                 </li>
                 <li>

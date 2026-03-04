@@ -1,6 +1,7 @@
 "use client";
 
 import { useSeoForm } from "@/contexts/seo-form-context";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -20,6 +21,7 @@ import { cn } from "@/lib/utils";
 
 function PricingsSection() {
   const { openForm } = useSeoForm();
+  const [yearly, setYearly] = useState<{ [key: number]: boolean }>({});
 
   return (
     <section className="layout-standard pb-24 grid lg:grid-cols-3 grid-cols-1">
@@ -34,7 +36,8 @@ function PricingsSection() {
             </CardTitle>
             {data.id === 1 || data.id === 2 ? (
               <CardDescription className="font-light text-heading text-2xl">
-                ${data.monthlyAmount} /month
+                ${yearly[data.id] ? data.yearlyAmount : data.monthlyAmount} /
+                {yearly[data.id] ? "month (yearly billing)" : "month"}
               </CardDescription>
             ) : (
               <CardDescription className="font-light text-heading text-2xl">
@@ -44,7 +47,13 @@ function PricingsSection() {
 
             {data.id === 1 || data.id === 2 ? (
               <div className="flex items-center gap-2 pt-2">
-                <Switch className="bg-white" />
+                <Switch
+                  checked={yearly[data.id] || false}
+                  onCheckedChange={(checked) =>
+                    setYearly((prev) => ({ ...prev, [data.id]: checked }))
+                  }
+                  className="bg-white"
+                />
                 <p className="font-light text-heading text-lg">Billed yearly</p>
               </div>
             ) : (
@@ -78,7 +87,8 @@ function PricingsSection() {
 
           <CardFooter className="md:pt-12 py-8">
             <Button
-              onClick={openForm}
+              onClick={data.id === 1 || data.id === 2 ? openForm : undefined}
+              asChild={data.id === 3}
               className={cn(
                 "rounded-none border-2 border-border font-heading font-medium text-base w-full h-[50px]",
                 data.id === 1 || data.id === 2
@@ -86,9 +96,11 @@ function PricingsSection() {
                   : "bg-primary-hover hover:bg-primary text-primary-foreground",
               )}
             >
-              {data.id === 1 || data.id === 2
-                ? "Get Started"
-                : "Contact Sales Team"}
+              {data.id === 3 ? (
+                <a href="tel:+12162478881">Contact Sales Team</a>
+              ) : (
+                "Get Started"
+              )}
             </Button>
           </CardFooter>
         </Card>

@@ -26,11 +26,13 @@ function RegisterPage() {
       </div>
 
       <div className="w-full h-full flex-col flex-center gap-4 !layout-standard">
-        <Image
-          src={Logo}
-          alt="Neural Rank"
-          className="md:w-[180px] w-[140px] h-auto"
-        />
+        <Link href={"/"}>
+          <Image
+            src={Logo}
+            alt="Neural Rank"
+            className="md:w-[180px] w-[140px] h-auto"
+          />
+        </Link>
 
         <div className="relative z-10 w-full md:max-w-md">
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 shadow-2xl">

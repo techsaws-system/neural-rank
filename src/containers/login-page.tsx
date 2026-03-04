@@ -25,11 +25,13 @@ function LoginPage() {
       </div>
 
       <div className="w-full h-full flex-col flex-center gap-4 !layout-standard">
-        <Image
-          src={Logo}
-          alt="Neural Rank"
-          className="md:w-[180px] w-[140px] h-auto"
-        />
+        <Link href={"/"}>
+          <Image
+            src={Logo}
+            alt="Neural Rank"
+            className="md:w-[180px] w-[140px] h-auto"
+          />
+        </Link>
 
         <div className="relative z-10 w-full md:max-w-md">
           <div className="bg-slate-800/50 backdrop-blur-sm border border-border rounded-2xl md:p-8 max-md:px-4 max-md:py-8 shadow-2xl">

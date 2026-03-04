@@ -165,10 +165,6 @@ export default function AioAbout() {
         </h1>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
-          <Button className="px-8 py-6 rounded-full text-[18px] leading-[18px] font-[700] bg-[#00FFD4] text-[#24262a] hover:opacity-90 transition">
-            Start Free Trial
-          </Button>
-
           <Button className="px-8 py-6 rounded-full text-[18px] leading-[18px] font-[700] bg-black border border-white/10 text-[#24262a] hover:bg-neutral-900 transition">
             Learn More
           </Button>

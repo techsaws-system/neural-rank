@@ -14,7 +14,7 @@ export const PricingSectionContent = [
         id: 2,
         title: "Growth",
         monthlyAmount: 599,
-        yearlyAmount: 550,
+        yearlyAmount: 499,
         custom: false,
         description: "For growing companies who want to monitor visibility and create AEO optimized content",
         points: [
