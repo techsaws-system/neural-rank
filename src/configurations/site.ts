@@ -44,7 +44,7 @@ export const siteConfig = {
     backgroundColor: "#0A0A0B",
 
     contact: {
-        email: "info@neuralrank.com"
+        email: "ask@neuralrank.co"
     },
 
     links: {

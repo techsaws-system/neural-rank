@@ -167,11 +167,11 @@ function Footer() {
 
                 <li>
                   <Link
-                    href={"mailto:info@neuralrank.com"}
+                    href={"mailto:ask@neuralrank.co"}
                     className="hover:text-white transition-colors md:text-sm text-xs font-medium flex items-center gap-2"
                   >
                     <Mail size={16} className="mt-0.5 flex-shrink-0" />
-                    <span>info@neuralrank.com</span>
+                    <span>ask@neuralrank.co</span>
                   </Link>
                 </li>
               </ul>

@@ -20,7 +20,7 @@ function GEOSolutionHeroSection() {
   return (
     <div className="relative flex-center flex-col text-center section-padding-standard layout-standard">
       <p className="text-sm font-medium text-sub-heading font-heading mb-6">
-        Profound for AEO Teams
+        Neural Rank for AEO Teams
       </p>
 
       <h1 className="text-heading font-heading font-light md:text-6xl text-3xl lg:max-w-[800px] text-center mb-6">

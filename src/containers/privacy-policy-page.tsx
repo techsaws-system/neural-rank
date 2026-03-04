@@ -237,7 +237,7 @@ function PrivacyPolicyPage() {
 
             <p className="md:text-base text-sm font-medium">
               To exercise these rights, please contact us at{" "}
-              <Link href={"mailto:info@nerualrank.co"}>info@nerualrank.co</Link>
+              <Link href={"mailto:ask@nerualrank.co"}>ask@nerualrank.co</Link>
             </p>
           </div>
 

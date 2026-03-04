@@ -6,7 +6,7 @@ function PricingsHeroSection() {
           Flexible Plans for Every Marketing Team
         </h1>
         <p className="md:text-2xl text-base font-medium text-sub-heading lg:max-w-[900px] text-center">
-          From bootstrapped startups to global enterprises, Profound delivers
+          From bootstrapped startups to global enterprises, Neural Rank delivers
           the visibility, insights, and control you need to stand out in Answer
           Engines.
         </p>
